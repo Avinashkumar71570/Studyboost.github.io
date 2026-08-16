@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="StudyBoost - Free Class 11 Science Notes, Formulas, Important Questions and JEE Preparation Resources.">
+
+<title>StudyBoost | Class 11 Science</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+:root{
+  --blue:#2563eb;
+  --dark:#0f172a;
+  --text:#334155;
+  --light:#f8fafc;
+  --white:#ffffff;
+  --border:#e2e8f0;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--light);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  background:white;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  text-decoration:none;
+  font-size:25px;
+  font-weight:800;
+  color:var(--blue);
+}
+
+.logo span{
+  color:var(--dark);
+}
+
+nav{
+  display:flex;
+  gap:22px;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:600;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:var(--blue);
+}
+
+.menu{
+  display:none;
+  background:var(--dark);
+  color:white;
+  border:0;
+  padding:8px 12px;
+  border-radius:7px;
+  font-size:20px;
+}
+
+/* HERO */
+.hero{
+  padding:90px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#eff6ff,#ffffff);
+}
+
+.badge{
+  display:inline-block;
+  background:#dbeafe;
+  color:#1d4ed8;
+  padding:7px 14px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(40px,7vw,70px);
+  line-height:1.05;
+  color:var(--dark);
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero p{
+  max-width:700px;
+  margin:20px auto;
+  color:#64748b;
+  font-size:18px;
+}
+
+.buttons{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:9px;
+  text-decoration:none;
+  font-weight:bold;
+  border:0;
+  cursor:pointer;
+}
+
+.primary{
+  background:var(--blue);
+  color:white;
+}
+
+.primary:hover{
+  background:#1d4ed8;
+}
+
+.secondary{
+  background:white;
+  color:var(--dark);
+  border:1px solid var(--border);
+}
+
+/* GENERAL */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.title h2{
+  color:var(--dark);
+  font-size:34px;
+}
+
+.title p{
+  color:#64748b;
+}
+
+/* SUBJECTS */
+.subjects{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:28px 20px;
+  text-align:center;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.icon{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  color:var(--dark);
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#64748b;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+/* SEARCH */
+.search{
+  max-width:700px;
+  margin:0 auto 40px;
+}
+
+.search input{
+  width:100%;
+  padding:17px 20px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  font-size:16px;
+  outline:none;
+}
+
+.search input:focus{
+  border-color:var(--blue);
+}
+
+/* NOTES */
+.notes{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.note{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:24px;
+}
+
+.tag{
+  display:inline-block;
+  background:#eff6ff;
+  color:var(--blue);
+  padding:5px 9px;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.note h3{
+  color:var(--dark);
+  margin-bottom:8px;
+}
+
+.note p{
+  color:#64748b;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.small{
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:7px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:bold;
+  margin-right:5px;
+}
+
+.read{
+  background:var(--blue);
+  color:white;
+}
+
+.pdf{
+  background:#f1f5f9;
+  color:var(--dark);
+}
+
+/* JEE */
+.jee{
+  background:var(--dark);
+  color:white;
+  border-radius:25px;
+  padding:55px 30px;
+  text-align:center;
+}
+
+.jee h2{
+  font-size:38px;
+}
+
+.jee>p{
+  color:#cbd5e1;
+  max-width:700px;
+  margin:10px auto;
+}
+
+.jee-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:35px;
+}
+
+.jee-card{
+  background:rgba(255,255,255,.08);
+  padding:22px;
+  border-radius:14px;
+  text-align:left;
+}
+
+.jee-card h3{
+  margin-bottom:7px;
+}
+
+.jee-card p{
+  color:#cbd5e1;
+  font-size:14px;
+}
+
+/* FORMULAS */
+.formulas{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.formula{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:15px;
+  padding:25px;
+  text-align:center;
+}
+
+.formula h3{
+  color:var(--dark);
+  margin-bottom:12px;
+}
+
+.equation{
+  background:#f8fafc;
+  color:var(--blue);
+  padding:15px;
+  border-radius:10px;
+  font-size:19px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.feature{
+  text-align:center;
+  padding:25px;
+}
+
+.feature-icon{
+  font-size:35px;
+}
+
+.feature h3{
+  color:var(--dark);
+  margin:8px 0;
+}
+
+.feature p{
+  color:#64748b;
+  font-size:14px;
+}
+
+/* CONTACT */
+.contact{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:30px;
+}
+
+.contact input,
+.contact textarea{
+  width:100%;
+  padding:13px;
+  margin-bottom:15px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  font-family:inherit;
+}
+
+.contact textarea{
+  min-height:130px;
+}
+
+/* FOOTER */
+footer{
+  background:#020617;
+  color:white;
+  padding:45px 20px 25px;
+}
+
+.footer{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer h3{
+  margin-bottom:12px;
+}
+
+.footer p,
+.footer a{
+  color:#94a3b8;
+  font-size:14px;
+}
+
+.footer a{
+  display:block;
+  text-decoration:none;
+  margin:7px 0;
+}
+
+.copyright{
+  max-width:1200px;
+  margin:30px auto 0;
+  padding-top:20px;
+  border-top:1px solid #1e293b;
+  text-align:center;
+  color:#64748b;
+  font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+  .subjects{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .notes{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .jee-grid,
+  .formulas,
+  .features{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:650px){
+
+  .menu{
+    display:block;
+  }
+
+  nav{
+    display:none;
+    position:absolute;
+    top:64px;
+    left:0;
+    right:0;
+    background:white;
+    flex-direction:column;
+    padding:20px;
+    border-bottom:1px solid var(--border);
+  }
+
+  nav.show{
+    display:flex;
+  }
+
+  .hero{
+    padding:65px 18px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .section{
+    padding:55px 16px;
+  }
+
+  .subjects,
+  .notes{
+    grid-template-columns:1fr;
+  }
+
+  .footer{
+    grid-template-columns:1fr;
+  }
+
+  .jee{
+    padding:40px 20px;
+  }
+
+  .jee h2{
+    font-size:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="navbar">
+
+    <a href="#home" class="logo">
+      Study<span>Boost</span>
+    </a>
+
+    <button class="menu" onclick="toggleMenu()">☰</button>
+
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#notes">Notes</a>
+      <a href="#formulas">Formulas</a>
+      <a href="#jee">JEE</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="badge">
+    🎓 Free Class 11 Study Resources
+  </div>
+
+  <h1>
+    Learn Smart.<br>
+    <span>Score Better.</span>
+  </h1>
+
+  <p>
+    Free Class 11 Science notes, formulas, important questions
+    and JEE preparation resources — all in one place.
+  </p>
+
+  <div class="buttons">
+
+    <a href="#notes" class="btn primary">
+      📚 Explore Notes
+    </a>
+
+    <a href="#jee" class="btn secondary">
+      🚀 Start JEE Preparation
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- SUBJECTS -->
+<section class="section" id="subjects">
+
+  <div class="title">
+    <h2>Explore Subjects</h2>
+    <p>Choose your subject and start learning.</p>
+  </div>
+
+  <div class="subjects">
+
+    <div class="card">
+      <div class="icon">⚛️</div>
+      <h3>Physics</h3>
+      <p>Concepts, formulas, numericals and important questions.</p>
+      <a href="#physics" class="btn primary">Explore</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🧪</div>
+      <h3>Chemistry</h3>
+      <p>Physical, Inorganic and Organic Chemistry resources.</p>
+      <a href="#chemistry" class="btn primary">Explore</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">📐</div>
+      <h3>Mathematics</h3>
+      <p>Concepts, formulas and practice questions.</p>
+      <a href="#maths" class="btn primary">Explore</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>Computer Science</h3>
+      <p>Python, programming and computer science concepts.</p>
+      <a href="#cs" class="btn primary">Explore</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SEARCH -->
+<section class="section">
+
+  <div class="title">
+    <h2>🔎 Find Your Notes</h2>
+    <p>Search for a chapter or topic.</p>
+  </div>
+
+  <div class="search">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search chapter, topic or subject..."
+      onkeyup="searchNotes()">
+  </div>
+
+</section>
+
+
+<!-- NOTES -->
+<section class="section" id="notes">
+
+  <div class="title">
+    <h2>📚 Latest Notes</h2>
+    <p>Quick and easy revision material.</p>
+  </div>
+
+  <div class="notes" id="notesContainer">
+
+    <div class="note">
+      <span class="tag">PHYSICS</span>
+      <h3>Units & Measurements</h3>
+      <p>Units, dimensions, errors and significant figures.</p>
+      <a href="#" class="small read">Read Notes</a>
+      <a href="#" class="small pdf">PDF</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">PHYSICS</span>
+      <h3>Motion in a Straight Line</h3>
+      <p>Distance, displacement, velocity and acceleration.</p>
+      <a href="#" class="small read">Read Notes</a>
+      <a href="#" class="small pdf">PDF</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">PHYSICS</span>
+      <h3>Motion in a Plane</h3>
+      <p>Vectors, projectile motion and circular motion.</p>
+      <a href="#" class="small read">Read Notes</a>
+      <a href="#" class="small pdf">PDF</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHEMISTRY</span>
+      <h3>Structure of Atom</h3>
+      <p>Atomic models, quantum numbers and electronic configuration.</p>
+      <a href="#" class="small read">Read Notes</a>
+      <a href="#" class="small pdf">PDF</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHEMISTRY</span>
+      <h3>Classification of Elements</h3>
+      <p>Periodic table and periodic properties.</p>
+      <a href="#" class="small read">Read Notes</a>
+      <a href="#" class="small pdf">PDF</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">MATHEMATICS</span>
+      <h3>Sets</h3>
+      <p>Sets, subsets, intervals and operations.</p>
+      <a href="#" class="small read">Read Notes</a>
+      <a href="#" class="small pdf">PDF</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">MATHEMATICS</span>
+      <h3>Trigonometric Functions</h3>
+      <p>Identities, equations and important results.</p>
+      <a href="#" class="small read">Read Notes</a>
+      <a href="#" class="small pdf">PDF</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">COMPUTER SCIENCE</span>
+      <h3>Python Basics</h3>
+      <p>Variables, data types and basic programming.</p>
+      <a href="#" class="small read">Read Notes</a>
+      <a href="#" class="small pdf">PDF</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PHYSICS -->
+<section class="section" id="physics">
+
+  <div class="title">
+    <h2>⚛️ Physics</h2>
+    <p>Class 11 Physics resources.</p>
+  </div>
+
+  <div class="notes">
+
+    <div class="note">
+      <span class="tag">CHAPTER 1</span>
+      <h3>Units & Measurements</h3>
+      <p>Units, dimensions, errors and significant figures.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHAPTER 2</span>
+      <h3>Motion in a Straight Line</h3>
+      <p>Distance, displacement, velocity and acceleration.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHAPTER 3</span>
+      <h3>Motion in a Plane</h3>
+      <p>Vectors, projectile motion and circular motion.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHAPTER 4</span>
+      <h3>Laws of Motion</h3>
+      <p>Newton's laws, friction and circular dynamics.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHAPTER 5</span>
+      <h3>Work, Energy & Power</h3>
+      <p>Work-energy theorem, power and conservation of energy.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHAPTER 6</span>
+      <h3>Rotational Motion</h3>
+      <p>Torque, angular momentum and moment of inertia.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CHEMISTRY -->
+<section class="section" id="chemistry">
+
+  <div class="title">
+    <h2>🧪 Chemistry</h2>
+    <p>Build strong Chemistry fundamentals.</p>
+  </div>
+
+  <div class="notes">
+
+    <div class="note">
+      <span class="tag">PHYSICAL</span>
+      <h3>Some Basic Concepts</h3>
+      <p>Mole concept, molar mass and stoichiometry.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">INORGANIC</span>
+      <h3>Structure of Atom</h3>
+      <p>Atomic structure and electronic configuration.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">INORGANIC</span>
+      <h3>Periodic Classification</h3>
+      <p>Periodic table and periodic properties.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHEMISTRY</span>
+      <h3>Chemical Bonding</h3>
+      <p>Ionic, covalent bonding and molecular structure.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MATHS -->
+<section class="section" id="maths">
+
+  <div class="title">
+    <h2>📐 Mathematics</h2>
+    <p>Practice concepts and formulas.</p>
+  </div>
+
+  <div class="notes">
+
+    <div class="note">
+      <span class="tag">CHAPTER 1</span>
+      <h3>Sets</h3>
+      <p>Sets, subsets, intervals and operations.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHAPTER 2</span>
+      <h3>Relations & Functions</h3>
+      <p>Relations, functions and important concepts.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHAPTER 3</span>
+      <h3>Trigonometric Functions</h3>
+      <p>Identities, equations and graphs.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">CHAPTER 4</span>
+      <h3>Complex Numbers</h3>
+      <p>Complex numbers and algebraic operations.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COMPUTER SCIENCE -->
+<section class="section" id="cs">
+
+  <div class="title">
+    <h2>💻 Computer Science</h2>
+    <p>Learn programming and computer fundamentals.</p>
+  </div>
+
+  <div class="notes">
+
+    <div class="note">
+      <span class="tag">PYTHON</span>
+      <h3>Python Basics</h3>
+      <p>Variables, data types and basic programming.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">PYTHON</span>
+      <h3>Conditional Statements</h3>
+      <p>if, elif and else statements.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+    <div class="note">
+      <span class="tag">PYTHON</span>
+      <h3>Loops</h3>
+      <p>for loops, while loops and practice problems.</p>
+      <a href="#notes" class="small read">Study</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FORMULAS -->
+<section class="section" id="formulas">
+
+  <div class="title">
+    <h2>📝 Quick Formula Sheets</h2>
+    <p>Revise important formulas quickly.</p>
+  </div>
+
+  <div class="formulas">
+
+    <div class="formula">
+      <h3>Physics</h3>
+      <div class="equation">v = u + at</div>
+      <p>Equation of motion</p>
+    </div>
+
+    <div class="formula">
+      <h3>Chemistry</h3>
+      <div class="equation">n = m / M</div>
+      <p>Mole calculation</p>
+    </div>
+
+    <div class="formula">
+      <h3>Mathematics</h3>
+      <div class="equation">sin²θ + cos²θ = 1</div>
+      <p>Basic trigonometric identity</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- JEE -->
+<section class="section" id="jee">
+
+  <div class="jee">
+
+    <h2>🚀 JEE Preparation</h2>
+
+    <p>
+      Build a strong Class 11 foundation with smart preparation,
+      regular revision and consistent practice.
+    </p>
+
+    <div class="jee-grid">
+
+      <div class="jee-card">
+        <h3>📅 Study Plan</h3>
+        <p>Create a balanced daily and weekly study routine.</p>
+      </div>
+
+      <div class="jee-card">
+        <h3>🎯 Chapter Strategy</h3>
+        <p>Focus on concepts first, then practice progressively.</p>
+      </div>
+
+      <div class="jee-card">
+        <h3>🧠 Revision</h3>
+        <p>Use short notes and formula sheets for revision.</p>
+      </div>
+
+      <div class="jee-card">
+        <h3>✍️ Practice</h3>
+        <p>Solve NCERT, school-level and JEE-style questions.</p>
+      </div>
+
+      <div class="jee-card">
+        <h3>📊 Mock Tests</h3>
+        <p>Test your preparation and analyse mistakes.</p>
+      </div>
+
+      <div class="jee-card">
+        <h3>🔥 Consistency</h3>
+        <p>Small daily progress builds a strong foundation.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="section">
+
+  <div class="title">
+    <h2>✨ Why StudyBoost?</h2>
+    <p>Designed to make studying simpler.</p>
+  </div>
+
+  <div class="features">
+
+    <div class="feature">
+      <div class="feature-icon">🆓</div>
+      <h3>Free Resources</h3>
+      <p>Useful study resources without unnecessary complexity.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">📱</div>
+      <h3>Mobile Friendly</h3>
+      <p>Study comfortably on mobile, tablet or computer.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <h3>Quick Revision</h3>
+      <p>Find formulas and important concepts quickly.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+
+  <div class="title">
+    <h2>📩 Contact</h2>
+    <p>Have a suggestion or question?</p>
+  </div>
+
+  <div class="contact">
+
+    <form onsubmit="sendMessage(event)">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required>
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Your Email"
+        required>
+
+      <textarea
+        id="message"
+        placeholder="Your Message"
+        required></textarea>
+
+      <button type="submit" class="btn primary">
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer">
+
+    <div>
+      <h3>StudyBoost 🚀</h3>
+      <p>
+        Free educational resources for Class 11 Science
+        students and JEE aspirants.
+      </p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="#home">Home</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#notes">Notes</a>
+      <a href="#formulas">Formulas</a>
+      <a href="#jee">JEE</a>
+    </div>
+
+    <div>
+      <h3>Subjects</h3>
+      <a href="#physics">Physics</a>
+      <a href="#chemistry">Chemistry</a>
+      <a href="#maths">Mathematics</a>
+      <a href="#cs">Computer Science</a>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 StudyBoost. Free educational resources for students.
+  </div>
+
+</footer>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+  document
+    .getElementById("nav")
+    .classList
+    .toggle("show");
+
+}
+
+
+/* SEARCH */
+
+function searchNotes(){
+
+  const input =
+    document
+      .getElementById("searchInput")
+      .value
+      .toLowerCase();
+
+  const cards =
+    document.querySelectorAll(".note");
+
+  cards.forEach(function(card){
+
+    const text =
+      card.innerText.toLowerCase();
+
+    if(text.includes(input)){
+      card.style.display="";
+    }else{
+      card.style.display="none";
+    }
+
+  });
+
+}
+
+
+/* CONTACT */
+
+function sendMessage(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value;
+
+  alert(
+    "Thank you, " +
+    name +
+    "! Your message has been received."
+  );
+
+  event.target.reset();
+
+}
+
+</script>
+
+</body>
+</html>
