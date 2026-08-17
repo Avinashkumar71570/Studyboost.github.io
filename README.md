@@ -919,7 +919,9 @@ Mole concept, molar mass and stoichiometry.
 
 <a href="#" class="small read">📖 Read Notes</a>
 
-<a href="#" class="small pdf">📥 PDF</a>
+<a href="Class_XI_Chemistry_Ch1_JEE_School_All_Topics_Notes.pdf" class="small pdf" target="_blank">
+📥 PDF
+</a>
 
 </div>
 
