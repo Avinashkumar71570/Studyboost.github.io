@@ -1124,7 +1124,7 @@ Dimensions, errors, significant figures and units.
 </p>
 
 <div class="note-buttons">
-  <a href="#notes" class="small read">📖 Study Chapter</a>
+  <a href="chemistry-ch1.html" class="small read">📖 Study Chapter</a>
 
   <a href="Class_XI_Chemistry_Ch1_JEE_School_All_Topics_Notes.pdf"
      class="small pdf"
